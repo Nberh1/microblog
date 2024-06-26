@@ -1,0 +1,20 @@
+body {
+      background: radial-gradient(circle, rgba(13,21,50,1) 0%, rgba(0,0,0,1) 100%);
+      color: white; /* Optional: Adjust text color for better visibility */
+      margin: 0;
+      padding: 0;
+    }
+
+    .logo-position {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 1000;
+    }
+
+    .centered-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
