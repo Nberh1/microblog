@@ -1,42 +1,65 @@
-"use strict";
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("signup-form");
 
-const registerForm = document.querySelector("#register");
+  form.addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent form submission
 
-registerForm.onsubmit = function (event) {
-  event.preventDefault();
+    // Validate form fields here
+    const username = document.getElementById("username").value;
+    const fullName = document.getElementById("fullName").value;
+    const password = document.getElementById("password").value;
 
-  const fullName = registerForm.fullName.value;
-  const username = registerForm.username.value;
-  const password = registerForm.password.value;
-  const passwordRepeat = registerForm.passwordRepeat.value;
+    if (
+      username.trim() === "" ||
+      fullName.trim() === "" ||
+      password.trim() === ""
+    ) {
+      alert("Please fill out all required fields.");
+      return;
+    }
 
-  if (password !== passwordRepeat) {
-    alert("Passwords do not match!");
-    return;
+    if (password.length < 6) {
+      alert("Password must be at least 6 characters long.");
+      return;
+    }
+
+    // If validation passes, submit the form
+    saveNewData(username, fullName, password);
+  });
+
+  function saveNewData(username, fullName, password) {
+    const newUser = {
+      username: username,
+      fullName: fullName,
+      password: password,
+    };
+
+    const requestInit = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(newUser),
+    };
+
+    fetch(
+      "http://microbloglite.us-east-2.elasticbeanstalk.com/api/users",
+      requestInit
+    )
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        console.log("Success:", data);
+        // Handle success scenario here (e.g., show a success message)
+        alert("Registration successful!");
+        form.reset(); // Clear the form after successful registration
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        // Handle error scenario here (e.g., show an error message)
+        alert("Registration failed. Please try again later.");
+      });
   }
-
-  const registerData = {
-    fullName: fullName,
-    username: username,
-    password: password,
-  };
-
-  registerForm.registerButton.disabled = true;
-
-  fetch(`${apiBaseURL}/api/users`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(registerData),
-  })
-    .then((response) => response.json())
-    .then((user) => {
-      alert("Congratulations! Your account has been created.");
-      window.location.assign("../posts/posts.html"); // Redirect to posts page
-    })
-    .catch((error) => {
-      alert("Error: " + error.message);
-      registerForm.registerButton.disabled = false;
-    });
-};
+});
