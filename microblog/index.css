@@ -1,37 +1,23 @@
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
-
-
 body {
   display: flex;
   justify-content: center; 
   align-items: center; 
   height: 100vh; 
-background-color: #2c3e50;
+background-color: #2c3e50;color: white; /* Text color */
+      margin: 0; /* Remove default margin */
+      padding: 0; /* Remove default padding */
 }
-
 
 main {
   max-width: 600px; 
   text-align: center; 
 }
 
-/* styles.css */
-.galaxy-background {
-  background: url('path_to_your_galaxy_image.jpg') no-repeat center center fixed;
-  background-size: cover;
-}
+
 
 header {
   position: absolute;
   top: 20px; /* Adjust this value to position the Twitter logo */
   left: 20px; /* Adjust this value to position the Twitter logo */
-}
-
-main {
-  flex: 1;
 }
 

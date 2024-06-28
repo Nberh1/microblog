@@ -24,48 +24,44 @@ Content-Type: application/json
 
 ### Step 3) GET Users
 GET  http://microbloglite.us-east-2.elasticbeanstalk.com/api/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik5hdGhhbmllbEBnbWFpbC5jb20iLCJpYXQiOjE3MTkzNzQ5NDQsImV4cCI6MTcxOTQ2MTM0NH0.r7aHpsmmuv32PvWlKlmoVoWSn6nBwpgMuKitbEyOWHg
-
-
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik5hdGhhbmllbEBnbWFpbC5jb20iLCJpYXQiOjE3MTk1MTU2NzEsImV4cCI6MTcxOTYwMjA3MX0.CQSb-Ni8w9Rq9IXnGiYKTV81AcINOJaOULLDCI6cAn4
 ### Step 4) GET One User
-GET  http://microbloglite.us-east-2.elasticbeanstalk.com/api/users/julien
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik5hdGhhbmllbEBnbWFpbC5jb20iLCJpYXQiOjE3MTkzNzQ5NDQsImV4cCI6MTcxOTQ2MTM0NH0.r7aHpsmmuv32PvWlKlmoVoWSn6nBwpgMuKitbEyOWHg
-
+GET  http://microbloglite.us-east-2.elasticbeanstalk.com/api/users/Nathaniel@gmail.com
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik5hdGhhbmllbEBnbWFpbC5jb20iLCJpYXQiOjE3MTk1MTU2NzEsImV4cCI6MTcxOTYwMjA3MX0.CQSb-Ni8w9Rq9IXnGiYKTV81AcINOJaOULLDCI6cAn4
 
 ### Step 5) Create a Post
 POST http://microbloglite.us-east-2.elasticbeanstalk.com/api/posts
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik5hdGhhbmllbEBnbWFpbC5jb20iLCJpYXQiOjE3MTkzNzQ5NDQsImV4cCI6MTcxOTQ2MTM0NH0.r7aHpsmmuv32PvWlKlmoVoWSn6nBwpgMuKitbEyOWHg
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik5hdGhhbmllbEBnbWFpbC5jb20iLCJpYXQiOjE3MTk1MTU2NzEsImV4cCI6MTcxOTYwMjA3MX0.CQSb-Ni8w9Rq9IXnGiYKTV81AcINOJaOULLDCI6cAn4
 {
   "text": "Hello World"
 }
 
 ### Step 6) GET Posts
 GET http://microbloglite.us-east-2.elasticbeanstalk.com/api/posts/
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik5hdGhhbmllbEBnbWFpbC5jb20iLCJpYXQiOjE3MTkzNzQ5NDQsImV4cCI6MTcxOTQ2MTM0NH0.r7aHpsmmuv32PvWlKlmoVoWSn6nBwpgMuKitbEyOWHg
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik5hdGhhbmllbEBnbWFpbC5jb20iLCJpYXQiOjE3MTk1MTU2NzEsImV4cCI6MTcxOTYwMjA3MX0.CQSb-Ni8w9Rq9IXnGiYKTV81AcINOJaOULLDCI6cAn4
 # 6675a0a2fbf13c2cc0eaf6e3
 
 ### Step 6B) GET Post
 GET http://microbloglite.us-east-2.elasticbeanstalk.com/api/posts/6675a3a2fbf13c2cc0eaf78b
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik5hdGhhbmllbEBnbWFpbC5jb20iLCJpYXQiOjE3MTkzNzQ5NDQsImV4cCI6MTcxOTQ2MTM0NH0.r7aHpsmmuv32PvWlKlmoVoWSn6nBwpgMuKitbEyOWHg
-
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik5hdGhhbmllbEBnbWFpbC5jb20iLCJpYXQiOjE3MTk1MTU2NzEsImV4cCI6MTcxOTYwMjA3MX0.CQSb-Ni8w9Rq9IXnGiYKTV81AcINOJaOULLDCI6cAn4
 ### Step 7) DELETE Post
 DELETE  http://microbloglite.us-east-2.elasticbeanstalk.com/api/posts/6675a0a2fbf13c2cc0eaf6e3
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik5hdGhhbmllbEBnbWFpbC5jb20iLCJpYXQiOjE3MTkzNzQ5NDQsImV4cCI6MTcxOTQ2MTM0NH0.r7aHpsmmuv32PvWlKlmoVoWSn6nBwpgMuKitbEyOWHg
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik5hdGhhbmllbEBnbWFpbC5jb20iLCJpYXQiOjE3MTk1MTU2NzEsImV4cCI6MTcxOTYwMjA3MX0.CQSb-Ni8w9Rq9IXnGiYKTV81AcINOJaOULLDCI6cAn4
 
 ### Step 8) Update User
 PUT  http://microbloglite.us-east-2.elasticbeanstalk.com/api/users/julien
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik5hdGhhbmllbEBnbWFpbC5jb20iLCJpYXQiOjE3MTkzNzQ5NDQsImV4cCI6MTcxOTQ2MTM0NH0.r7aHpsmmuv32PvWlKlmoVoWSn6nBwpgMuKitbEyOWHg
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik5hdGhhbmllbEBnbWFpbC5jb20iLCJpYXQiOjE3MTk1MTU2NzEsImV4cCI6MTcxOTYwMjA3MX0.CQSb-Ni8w9Rq9IXnGiYKTV81AcINOJaOULLDCI6cAn4
 
 {
-  "fullName": "Julien Gold",
+  "fullName": "Nathaniel Berhane",
   "bio": "Hello World"
 }
 ### Step 9) Add Like
 POST  http://microbloglite.us-east-2.elasticbeanstalk.com/api/likes
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik5hdGhhbmllbEBnbWFpbC5jb20iLCJpYXQiOjE3MTkzNzQ5NDQsImV4cCI6MTcxOTQ2MTM0NH0.r7aHpsmmuv32PvWlKlmoVoWSn6nBwpgMuKitbEyOWHg
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik5hdGhhbmllbEBnbWFpbC5jb20iLCJpYXQiOjE3MTk1MTU2NzEsImV4cCI6MTcxOTYwMjA3MX0.CQSb-Ni8w9Rq9IXnGiYKTV81AcINOJaOULLDCI6cAn4
 
 {
   "postId": "6675a3a2fbf13c2cc0eaf78b"
@@ -73,4 +69,4 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik5hd
 
 ### Step 10) Delete/Remove Like
 DELETE  http://microbloglite.us-east-2.elasticbeanstalk.com/api/likes/6675a538fbf13c2cc0eaf7e4
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik5hdGhhbmllbEBnbWFpbC5jb20iLCJpYXQiOjE3MTkzNzQ5NDQsImV4cCI6MTcxOTQ2MTM0NH0.r7aHpsmmuv32PvWlKlmoVoWSn6nBwpgMuKitbEyOWHg
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik5hdGhhbmllbEBnbWFpbC5jb20iLCJpYXQiOjE3MTk1MTU2NzEsImV4cCI6MTcxOTYwMjA3MX0.CQSb-Ni8w9Rq9IXnGiYKTV81AcINOJaOULLDCI6cAn4
